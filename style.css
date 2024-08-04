@@ -1,0 +1,110 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+}
+body{
+    background: linear-gradient(to left, hsl(251, 100%, 50%), hsl(24, 100%,50%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.main{
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 10px solid #ff0000;
+    position: relative;
+}
+.main .number{
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 2rem;
+}
+.main .number1{
+    --rotation: 30deg;
+}
+.main .number2{
+    --rotation: 60deg;
+}
+.main .number3{
+    --rotation: 90deg;
+}
+.main .number4{
+    --rotation: 120deg;
+}
+.main .number5{
+    --rotation: 150deg;
+}
+.main .number6{
+    --rotation: 180deg;
+}
+.main .number7{
+    --rotation: 210deg;
+}
+.main .number8{
+    --rotation: 240deg;
+}
+.main .number9{
+    --rotation: 270deg;
+}
+.main .number10{
+    --rotation: 300deg;
+}
+.main .number11{
+    --rotation: 330deg;
+}
+.main .number12{
+    --rotation: 0deg;
+}
+.main .mil{
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: #000;
+    border-radius: 10px 10px 0 0;
+    width: 10px;
+    height: 140px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+.main::after{
+    content: '';
+    position: absolute;
+    background-color: #000;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+.main .mil.second {
+    width: 5px;
+    height: 45%;
+    background-color: rgba(228,8,8);
+    border: 1px solid white;
+}
+.main .mil.minute{
+    width: 8px;
+    height: 45%;
+    background-color: rgba(46,14,189);
+    border: 1px solid black;
+}
+.main .mil.hour {
+    width: 12px;
+    height: 38%;
+    background-color: rgba(11,8,187);
+    border: 1px solid black;
+}
